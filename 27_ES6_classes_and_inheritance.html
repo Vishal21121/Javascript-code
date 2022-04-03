@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading" class='yourhead rhia is'> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this" id='myul'>
+                <li class="childul" id='fui'>this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul" id='lui'>of my dreams</li>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <button id="btn">Submit form</button>
+            <!-- <input type="button" id='btn' value="submit"> -->
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    console.log("this is Tutorial31.js");
+
+    class Employee {
+        // constrctor is a function which is used when we make an object of the class
+        constructor(givenName, givenExperience, givenDivision) {
+            this.name = givenName;
+            this.experience = givenExperience;
+            this.division = givenDivision;
+        }
+
+        // this is going to the pototype of this object
+        slogan() {
+            return `I am ${this.name} and this company is the best`;
+        }
+
+        // this is going to the pototype of this object
+        joiningYear() {
+            return 2020 - this.experience;
+        }
+        // class variables are variables which are under constructor 
+        // in all the functions except static if you are using class variable then you have to create the object but the static methods are methods in which we do not use class variables so it can be used without creating the object-> inshort static is used when we don't use this.
+
+        // this is going to the pototype of this object
+        static add(a, b) {
+            return a + b;
+        }
+    }
+
+    // harry = new Employee("Harry", 56, "Division");
+    // console.log(harry.joiningYear());
+
+    // static method
+    // console.log(Employee.add(34, 5))
+
+    class Programmer extends Employee {
+        constructor(givenName, givenExperience, givenDivision, language, github) {
+
+            // super means the constructor of the inherited class(here Employee) -> and so by writing this it will be like copy pasting the constructor of the inherited class (here Emoloyee) over here. It is very beneficial when we want to reflect the change in both inherited class(here Emoloyee) and the class inheriting(here Programmer).
+            super(givenName, givenExperience, givenDivision);
+            this.language = language;
+            this.github = github;
+        }
+
+        favoriteLanguage() {
+            if(this.language == 'python') {
+                return 'Python';
+            }
+            else {
+                return 'JavaScript';
+            }
+        }
+
+        static multiply(a, b) {
+            return a * b;
+        }
+    }
+
+
+    rohan = new Programmer("Rohan", 3, "Lays", "Go", "Rohan420")
+    console.log(rohan)
+    console.log(rohan.favoriteLanguage())
+    console.log(Programmer.multiply(5, 7));
+
+
+
+</script>
+
+</html>

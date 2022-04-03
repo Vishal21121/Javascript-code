@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="child">this</li>
+                <li class="child">is</li>
+                <li class="child">a</li>
+                <li class="child">list </li>
+                <li class="child">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+
+    // character set: we use []
+    let regex =/h[a-z]rry/; // -> it means after h any character b/w a and z can come
+    // for ex: 
+    let str = "harry bhai";
+    //------------------------------------------------------
+
+    regex =/h[ryu]rry/; // here only r,y,u are allowed
+     str = "harry bhai";
+
+    //-------------------------------------------------------
+
+    regex = /h[^aty]rr[yuY]/ // here at first it will allow except a,t,y and then in next part it will only allow y, u and Y
+    // for eg:
+    str = "hirru bhai";
+
+    //-------------------------------------------------------
+
+    regex = /h[a-zA-Z]rr[yu0-9]/ // in first part it will allow from a-z or A-Z and in second part it will allow y,u or any number b/w 0-9
+    
+    str = 'hirry9 bhai';
+    // -----------------------------------------------------
+
+     // Quantifiers - we use {}
+
+     regex = /har{2}y/; // r can occur exactly 2 times
+     str = 'harry bhai';
+
+    //  -----------------------------------------------------
+
+
+     regex = /har{0,2}y/; // r can occur exactly 0,1,2 times
+     str = 'hary bhai' ;
+
+    //----------------------------------- --------------------
+
+    // Groupings - we use paranthesis for groupings ()
+    regex = /(har){2}y/
+    str = 'harhary bhai';
+    // -----------------------------------------------------
+
+    regex = /(har){2}([0-9]r){3}/ 
+    str = 'harhar1r2r3r bhai';
+
+    // ------------------------------------------------------
+
+
+    let result = regex.exec(str);
+    console.log(result);
+
+    if(regex.test(str)) {
+        console.log(`the string ${str} matches the expression ${regex.source}`);
+    }
+    else {
+        console.log(`the string ${str}  does not matches the expression ${regex.source}`);
+
+    }
+</script>
+
+</html>

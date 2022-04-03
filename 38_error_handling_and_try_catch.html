@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="child">this</li>
+                <li class="child">is</li>
+                <li class="child">a</li>
+                <li class="child">list </li>
+                <li class="child">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    // Pretend this is coming from th server as response
+    let a = 'Harry Bhai';
+    a=undefined;
+    if(a!=undefined){
+        // throw new error is helpful in throwing in the console
+      throw new Error("This is not defined")
+    }
+    else{
+        console.log("this is defined")
+    }
+    
+    // try execpt -> try will try to execute the code  if due to any reason we get any error then catch will take it and you can print the error in a string format in the console
+    try {
+        console.log('We are inside try block');
+            functionHarry();
+    } catch (error) {
+        console.log('Are you Okay');
+        // error will show the error which has came due to the functionHarry()
+        console.log(error);
+        // error.name will show the name of the error which has came due to the functionHarry()
+        console.log(error.name);
+        // error.message will show the message of the error which has came due to the functionHarry()
+        console.log(error.message);
+        
+    }
+    // finally will execute irrespective that control enters catch or try
+    finally{
+        console.log('finally we will execute the code');
+        
+    }
+    
+</script>
+</html>

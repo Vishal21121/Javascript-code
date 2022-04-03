@@ -1,0 +1,18 @@
+Comparison:-
+In the following table, we are comparing for..in loop and for..of loop.
+
+ 	
+Applies to                          for..in                                         for..of
+                              Enumerable Properties                          Iterable Collections   
+Objects                      Yes                                               No
+Arrays                       Yes but not advised                               Yes
+Strings                      Yes but not advised                               Yes
+
+
+
+Which loop should we use? and When?
+Each type of loop is useful in a different scenario:
+
+If indexes are needed while accessing an array of indexes related logical stuff are there, the for loop is a good choice.
+If there is a need to access keys/properties regardless of the sequence, use a for-in loop.
+If there is a need to iterate through items of an iterable, then the for-ofloop is the right choice.

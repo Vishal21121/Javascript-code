@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="child">this</li>
+                <li class="child">is</li>
+                <li class="child">a</li>
+                <li class="child">list </li>
+                <li class="child">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    let regex = /harry/;
+
+
+    // Lets look into some metacharacter symbols
+    regex = /^harrdc/; // ^ means expression will match if string starts with that expression.
+    regex = /harry$/; // $ means expression will match if string ends with that expression.
+    regex = /h.rry/; //matches if any one character comes in place of dot and then that word is present in the string.
+    regex = /h*rry/; //matches if no character or more than zero character comes in place of dot and then that word is present in the string. 
+
+    regex = /ha?rryi?t/; //  ? after character means that character is optional 
+    regex = /h\*rry/ // if we want * to be present than use star with backslash
+
+
+    let str = 'h*rry means codewith';
+
+    let result = regex.exec(str);
+    console.log(result);
+
+    if(regex.test(str)) {
+        console.log(`the string ${str} matches the expression ${regex.source}`);
+    }
+    else {
+        console.log(`the string ${str}  does not matches the expression ${regex.source}`);
+
+    }
+
+    // other metacharacters
+    /*
+    1. +   ->  /ah+x/ matches ""ahx" or "ahhhhhhhx"
+    2. \.  ->  /etc\./ matches "etc."
+    3. \/  ->  /.+\/.+/ matches "home/my"
+    4. \+  ->  /.+ \+ .+/ matches "five + four"
+    5. \?  ->  /.+\?/ matches "really?"
+
+
+
+    */
+</script>
+
+</html>

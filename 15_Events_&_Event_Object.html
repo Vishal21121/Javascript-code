@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading" class="yourhead this is"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="child">this</li>
+                <li class="child">is</li>
+                <li class="child">a</li>
+                <li class="child">list </li>
+                <li class="child">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+
+    // here we are grabbing the element by id and then we have added .eventListener function in the argument it takes the name of the event and the function, in function it takes e as argument. e is the object of the events
+    document.getElementById("heading").addEventListener("click", function (e) {
+        let variable;
+        console.log("You have clicked the heading");
+
+        // e.target will tell where yo have clicked on the web page
+        variable = e.target;
+
+        // .className will return the name of the class of the element
+        variable = e.target.className;
+
+        
+        // it will return the token list of the class
+        variable = e.target.classList;
+        
+        
+        // inorder to create the array of the token list we use Array.from(e.target.classList)
+        variable = Array.from(e.target.classList);
+        
+        
+        // .id will return the name of the id of the element
+        variable = e.target.id;
+        
+        // it returns the value of the x which is the distance with respect to the element
+        variable = e.offsetX;
+        
+        // it returns the value of the x which is the distance with respect to the element
+        variable = e.offsetY;
+
+        // it returns the x value with respect to window
+        variable = e.clientX;
+        
+        // it returns the y value with respect to window
+        variable = e.clientY;
+        
+        console.log(variable);
+        // location.href = '//codewithharry.com'
+    });
+
+
+</script>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="childul">this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+
+<script>
+    let a = document; // it will print the whole html and all the components of the html in the console
+
+    a = document.all; // it will give all the tags present in the html in array kind of object but not exactly array
+    
+    a = document.body; // it will give all the body components of the html
+    a = document.forms[0];
+    
+    // here by using Array.from(a) it is used when we want to access the dom ,we are creating a array from a
+    // Array.from(a).forEach(function(element){  
+    //         console.log(element);
+    //     })
+         a = document.links[0]; // it will give the link with the a  tag
+        a = document.links[0].href; // it will give the exact link
+        console.log(a); 
+        
+    // use document.images and document.scripts and print the list of images and scripts on an html page
+/*
+            
+            document.anchors
+            It will return all <a> elements that have a name attribute
+            
+            document.baseURI
+            It will return the absolute base URI of the document
+            
+            document.body
+            It will return the <body> element
+            
+            document.cookie
+            It will return the document's cookie
+            
+            document.doctype
+            It will return the document's doctype
+            
+            document.documentElement
+            It will return the <html> element
+            
+            document.documentMode
+            It will return the mode used by the browser
+            
+            document.documentURI
+            It will return the URI of the document
+            
+            document.embeds
+            It will return all HTML <embed> elements
+            
+            document.forms
+            It will return all HTML <form> elements
+            
+            document.head
+            It will return the HTML <head> element
+            
+            document.images
+            It will return all HTML <img> elements
+            
+            document.implementation
+            It will return the DOM implementation
+            
+            document.links
+            It will return all HTML <area> and <a> elements that have a href attribute
+            
+            document.scripts
+            It will return all HTML <script> elements
+            
+            document.title
+            It will return the <title> element
+            
+            document.URL
+            It will return the complete URL of the document
+            
+            Note that: The DOM is a representation of the various components of the browser and the current Web document that can be accessed or manipulated using JavaScript.
+            */
+</script>
+
+</html>

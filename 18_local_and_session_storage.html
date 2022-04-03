@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="child">this</li>
+                <li class="child">is</li>
+                <li class="child">a</li>
+                <li class="child">list </li>
+                <li class="child">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <button id="btn">Submit form</button>
+            <!-- <input type="submit" id="btn"  value="submit"> -->
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    let impArray = ['adrak', 'pyaz', 'bhindi'];
+
+    // local storage:
+    // the way to storre data on  the client's computer is by local storage. The local storage  allows us to save the key/value pairs in a web browser and it stores data with no expiration date. We can access local storage via JavaScript and HTML5. However, the user can clear the browser data to erase all localStorage data.
+
+    // Session Storage
+    // The session storage is used to store data only for a session, meaning that it is stored until the browser (or tab) is closed. Remember that, in session storage, the data is never transferred to the server and can only be read on the client-side. The storage limit is between 5-10MB. By opening multiple windows or tabs with the same URL creates sessionStorage for each tab or window.
+
+    // setItem helps us to set the key value pair
+    // localStorage.setItem('Name', 'Harry');
+    // localStorage.setItem('Name2', 'Rohan');
+
+//-----------------------------------------IMPORTANT POINTS ------------------------------------------
+
+// 1. anything we put in localstorage or session storage it will be converted into string automatically.
+// 2. So inorder to get the item from localstorage in its own data type use JSON.parse
+// 3. Inorder to store any data type except string use JSON.stringify so that its data type is not distorted
+// ---------------------------------------------------------------------------------------------------
+
+    // inorder to store array in the local storage we should use JSON.stringify
+    localStorage.setItem('Sabzi', JSON.stringify(impArray));
+
+    // Clears the entire local storage
+    // localStorage.clear();
+
+    // Clear a particular key-value pair
+    // localStorage.removeItem('Name2');
+
+    // Retrieve an item from the local Storage
+    let name = localStorage.getItem('Name');
+
+    // inorder to convert the array from string which we stored as string using JSON.stringify we should use this JSON.parse
+    name = JSON.parse(localStorage.getItem('Sabzi'));
+    console.log(name)
+
+// the same functions setItem, getItem, clear, removeItem can be used in session storage as well
+// sessionStorage.setItem('sessionName', 'sHarry');
+// sessionStorage.setItem('sessionName2', 'sRohan');
+// sessionStorage.setItem('sessionSabzi', JSON.stringify(impArray));
+
+</script>
+
+</html>

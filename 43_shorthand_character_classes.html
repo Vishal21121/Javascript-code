@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="child">this</li>
+                <li class="child">is</li>
+                <li class="child">a</li>
+                <li class="child">list </li>
+                <li class="child">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    let regex = /\war/;  //word character - _ or alphabet or numbers
+    regex = /\w+d1r/;       // \w+ means one or more word characters
+    regex = /\Wbhai/;       // Non word character
+    regex = /\W+bhai/;      // \W+ means more than one Non word character
+    regex = /number \d999/; // \d means digit
+    regex = /number \d+/;   // \d+ means more than one digit
+    regex = /\D999/;        // \D means non digit
+    regex = /\D+999/;       // \D+ means more than one non digit
+    regex = /\ska number/;  // Match whitespace character
+    regex = /\s+ka number/; // \s+ means match one or more than one whitespace characters
+    regex = /\Ska number/;  // Match non whitespace character
+    regex = /\S+ka number/; // Match one or more than one non whitespace character
+    regex = /4r5r\b/;  // word boundary
+
+    // Assertions
+    // regex = /h(?=y)/; // it tells that after h there should be y
+    regex = /h(?!y)/; // it tells that after h there can be anything but there should not be y
+
+    let str = "harh7rd1r4r5r %%$@bhai harryka number 899999harry9999";
+
+
+    let result = regex.exec(str);
+    console.log(result);
+
+    if(regex.test(str)) {
+        console.log(`the string ${str} matches the expression ${regex.source}`);
+    }
+    else {
+        console.log(`the string ${str}  does not matches the expression ${regex.source}`);
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="child">this</li>
+                <li class="child">is</li>
+                <li class="child">a</li>
+                <li class="child">list </li>
+                <li class="child">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    /*
+    element selectors:
+    1. Single element selector
+    2. Multi element selector
+    
+    */
+
+    // 1. Single element selectors
+    // in element we will get the elememt by using document.getElementById('myfirst')
+    let element = document.getElementById('myfirst');
+
+
+    // in this way we will get the names of the classes in the element
+    // element = element.className;
+
+    // in this way we will get the thing which is inside the tag 
+    element = element.childNodes; 
+    // console.log(element);
+    
+
+
+    
+    // in this way we will get the element in which it is present
+    element = element.parentNode;
+    console.log(element);
+
+    // it helps to change the style here we are using color, but we can use background-color and other style too
+    // element.style.color = 'red';
+
+    // in this way we can get the inner text of the html tag
+    // element.innerText = 'Harry is a good boy';
+
+    // in this way we get the inner html of a html tag and we can use the html here also
+    // element.innerHTML = '<b>Harry is a good boy</b>';
+
+
+    // console.log(element.innerText);
+
+    // query selectors:-
+
+    // here we are selecting the whole content in the html tag with id by using # with id-name but we will get only the first element with that id
+    let sel = document.querySelector('#myfirst');
+
+    // here we are selecting the whole content in the html tag with class by using . with class-name but we will get only the first element with that class
+    sel = document.querySelector('.child');
+    // console.log(sel)
+
+    // here we are selecting the whole content in the html tag with tag by writing the tag name and we will only get the first tag not all
+    sel = document.querySelector('div');
+
+    sel.style.color = 'green'; // here only the first div color will be green as we are using single element selector
+
+
+    // 2. Multi element selector
+    let elems = document.getElementsByClassName('child');
+    elems = document.getElementsByClassName('container');
+    elems = document.getElementsByTagName('div');
+    // console.log(elems)
+
+    // here we are iterating the element of elems
+    // for(let index = 0; index < elems.length; index++) {
+    //     const element = elems[index];
+    //     console.log(element);
+    //     element.style.color = 'blue';
+    // }
+
+
+    Array.from(elems).forEach(element => {
+        console.log(element);
+        element.style.color = 'blue';
+    });
+console.log(elems[0].getElementsByClassName('child'))
+
+</script>
+
+</html>

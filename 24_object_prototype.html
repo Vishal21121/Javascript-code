@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading" class='yourhead rhia is'> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this" id='myul'>
+                <li class="childul" id='fui'>this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul" id='lui'>of my dreams</li>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <button id="btn">Submit form</button>
+            <!-- <input type="button" id='btn' value="submit"> -->
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+  // prototype -> prototype means from where we are making. we make object from objects literals and object literals inherits from Object.prototype. with the help of constructor when we make a object then it is inherited from Object.prototype.
+
+    // Object literal : Object.prototype
+    let obj = {
+        name: "harry",
+        channel: "Code With Harry",
+        address: "Mars"
+    }
+
+    function Obj(givenName) {
+        this.name = givenName
+    }
+
+    // when we want to create different objects and in all that objects we want to inherit a particular   function then we can take one object as reference and using that we can put that   function in the prototype of that object so that importing that object will allow us to use that   function then we do in this way -> here getname will be added to prototype
+    // we can also change the original object by Object.prototype.something but it is not a good practice
+
+    // here we are adding getName function in the object Obj
+    Obj.prototype.getName = function () {
+        return this.name;
+    }
+    // here we are adding setName function in the object Obj
+    Obj.prototype.setName = function (newName) {
+        this.name = newName;
+    }
+
+
+    // here we are creating Instance like we create in python
+    let obj2 = new Obj("Rohan Das");
+    console.log(obj2);
+
+</script>
+
+<!-- More Methos and functions -->
+
+hasOwnProperty(): It will return a boolean indicating whether an object contains the specified property as a direct property of that object and not inherited through the prototype chain.
+
+isPrototypeOf(): It will return a boolean indicating whether the specified object is in the prototype chain of the object, this method is called upon.
+
+propertyIsEnumerable(): It will return a boolean that indicates whether the specified property is enumerable or not.
+
+toLocaleString(): It will return the string in the local format.
+
+toString(): It will return the string.
+
+valueOf() :It will return the primitive value of the specified object.
+
+
+</html>

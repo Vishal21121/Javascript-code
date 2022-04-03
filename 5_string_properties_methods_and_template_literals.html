@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    const name = "vishal"
+    const greeting = 'Good Morning';
+    console.log(greeting + " " + name); // + sign is helping in string concatination
+
+    let html;
+    html = "<h1> this is heading </h1>" + "<p> this is paragraph </p>";
+
+    html = html.concat('this', ' str2'); // concat function is helping in string concatination
+    // console.log(html);
+    // console.log(html.length); // it will give the length of the string
+    // console.log(html.toLowerCase()); // it will convert string to lower case
+    // console.log(html.toUpperCase()); // it will convert string to uppercase
+
+    // console.log(html[1]); // it will give the character at that index
+
+    // console.log(html.indexOf('<')); // it will give the index of the first occureence of the character 
+
+    // console.log(html.lastIndexOf('<')); // it will give the index of the last occurence of the character 
+
+    // console.log(html.charAt(3)); // it will give the character at that index
+
+    // console.log(html.endsWith('str2')); // -> it returns true or false if the string is present at last then it will return true else false
+
+    // console.log(html.includes('h1')); // -> it returns true or false if the string is present in the variable then it will return true else false
+
+    // console.log(html.substring(1,6)); // -> it takes the starting point and end point and it slice the string from 1 to 5 if in substring only first argument is given for eg: html.substring(1) then output will be < because the substring will take first argument as length and rest part of the string except that letter will be deleted
+
+    // console.log(html.slice(0,4)); // it works same as substring but it also takes -ve indices
+
+    // console.log(html.split('>')); // it will split the string as the input in the function
+
+    // console.log(html.replace('this', 'it')); // it will replace the string this with it
+
+    let fruit1 = 'Orange\'';
+    let fruit2 = "Apple";
+    let myHtml = `Hello ${name}
+                <h1> This is 'my' haeding </h1>
+                <p> you like ${fruit1} and ${fruit2}`;
+
+    console.log(myHtml)
+
+
+</script>
+
+</html>

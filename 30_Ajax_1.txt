@@ -1,0 +1,8 @@
+. Ajax stands for asynchronous Javascript and XML
+. Ajax is not a programming language rather it's a set of existing technologies 
+. Ajax helps in fetching data asynchronously without interfering with the existing page.
+. No page reload/ refresh 
+. modern websites use JSON or XML for data transfer
+. Ajax uses XMLHttpRequest object (also called xhr object) to achieve this
+. Modern websites use json instead xml for data transfer.
+. Data can be transformed in any format and protocol (Not always https necessarily)

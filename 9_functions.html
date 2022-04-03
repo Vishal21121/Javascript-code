@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+</body>
+<script>
+        
+    // let/ const have block level scope -> if we declare let/const in a block then they will have local scope and if we declare them outside the block then they will have global scope
+    
+    
+    // whereas var has function level scope -> means if we declare the var variable in a block then it will have global scope whereas if we declare the var variable in the function then it will have the function scope
+    
+    
+    if(1){
+        let i =234;
+        console.log(i)
+    }
+    
+    // console.log(i);
+    
+    function ui(name)
+    {
+        let i = 9;
+        console.log(i);
+        return `This is a ${name} ui`;
+    }
+    // console.log(ui("harry"), i)
+    
+    
+    // here we are not naming the function and storing the function in a variable
+    const mygreet = function(name, thank='Thank You'){ // here thank = 'Thank You' is the default value which will be applied if we do not pass the argument thank in function call
+        let msg = `Happy Birthday ${name} How I wish I could fly to you right now and be with you on this special day of yours. But remember, my good wishes are always there with you. ${thank}!`;
+        return msg;
+    
+    }
+    
+    
+    // let name = 'SkillF';
+    // let name2 ='Rohan';
+    
+    let val = mygreet(name, 'Thanks a lot');
+    console.log(val);
+    
+    // here we are creating function inside object and we have created function without name
+    const myobj = {
+        name: "SkillF",
+        game: function(){
+            return "GTA";
+        }
+    }
+    console.log(myobj.game())
+    
+    
+    // arr = ['fruit', 'vegetable', 'furniture'];
+    
+    // arr.forEach(function(element, index, array) {
+    //     console.log(element, index)
+    // });         
+    
+        </script>
+</html>

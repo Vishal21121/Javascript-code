@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    console.log("Welcome to tutorial 24");
+
+    let today = new Date();
+    // console.log(typeof today);
+   // here   8 is month 4 is the day and 2003 is the year and it follows the order MM/DD/YYYY
+    let otherDate = new Date('8-4-2003 04:54:08');
+    // it follows the order MM/DD/YYYY
+    // otherDate = new Date('June 13 1976');
+    // it follows the order MM/DD/YYYY
+    // otherDate = new Date('09/16/1976');
+    console.log(otherDate);
+    let a;
+
+    // it will give the value according to the day for ex: if the day is thursday then it will start count from sunday as 0 and the accodingly thursday will be 4
+    a = otherDate.getDay(); 
+
+    // it will give the date
+    a = otherDate.getDate();
+
+    // it will give the minutes
+    a = otherDate.getMinutes();
+
+    // it will give the seconds
+    // a = otherDate.getSeconds();
+
+    // it will give the hours
+    // a = otherDate.getHours();
+
+    // it will give time in seconds from 1 jan 1970 till the date used in otherDate
+    a = otherDate.getTime();
+    
+    // it will give time in milisceonds from 1 Jan 1970 till the date used in otherDate
+    a = otherDate.getMilliseconds();
+
+    // it will give the month from otherDate
+    a = otherDate.getMonth();
+
+    // it will give the date from otherDate
+    a= otherDate.getDate();
+
+    // console.log(a);
+
+    // set function is used to set the time
+
+    // it will set the date
+    otherDate.setDate(23);
+
+    // it will set the Month
+    otherDate.setMonth(0);
+
+    // it will set the full year
+    otherDate.setFullYear(1900);
+
+    // it will set the minutes
+    otherDate.setMinutes(2);
+
+    // it will set the hours
+    otherDate.setHours(1);
+
+    // it will set the seconds
+    otherDate.setSeconds(3);
+    console.log(otherDate);
+
+//-------------------------------------OTHER FUNCTIONS OF TIME ---------------------------------------
+
+
+/*
+
+It will return the day of the month (from 1-31)
+getDate()
+
+
+It will return the day of the week (from 0-6)
+getDay()
+
+
+It will return the year
+getFullYear()
+
+
+It will return the hour (from 0-23)
+getHours()
+
+It will return the milliseconds (from 0-999)
+getMilliseconds()
+
+
+It will return the minutes (from 0-59)
+getMinutes()
+
+
+It will return the month (from 0-11)
+getMonth()
+
+
+It will return the seconds (from 0-59)
+getSeconds()
+
+
+It will return the number of milliseconds since midnight Jan 1 1970, and a specified date
+getTime()
+
+
+It will return the time difference between UTC time and local time, in minutes
+getTimezoneOffset()
+
+
+It will return the day of the month, according to universal time (from 1-31)
+getUTCDate()
+
+
+It will return the hour, according to universal time (from 0-23)
+getUTCHours()
+
+
+It will return the milliseconds, according to universal time (from 0-999)
+getUTCMilliseconds()
+
+
+It will return the minutes, according to universal time (from 0-59)
+getUTCMinutes()
+
+
+It will return the month, according to universal time (from 0-11)
+getUTCMonth()
+
+
+It will return the seconds, according to universal time (from 0-59)
+getUTCSeconds()
+
+
+It will set the day of the month of a date object
+setDate()
+
+
+It will set the year of a date object
+setFullYear()
+
+
+It will set the hour of a date object
+setHours()
+
+
+It will set the milliseconds of a date object
+setMilliseconds()
+
+
+It will set the minutes of a date object
+setMinutes()
+
+
+It will set the month of a date object
+setMonth()
+
+
+It will set the hour of a date object, according to universal time
+setUTCHours()
+
+
+It will convert the date portion of a Date object into a readable string
+toDateString()
+
+
+It will convert a Date object to a string, using locale conventions
+toLocaleString()
+
+
+It will convert a Date object to a string
+toString()
+
+
+It will convert the time portion of a Date object to a string
+toTimeString()
+
+
+It will convert a Date object to a string, according to universal time
+toUTCString()
+
+
+It will return the number of milliseconds in a date since midnight of January 1, 1970, according to UTC time
+UTC()
+
+
+It will return the primitive value of a Date object
+valueOf()
+
+
+*/
+
+</script>
+
+</html>

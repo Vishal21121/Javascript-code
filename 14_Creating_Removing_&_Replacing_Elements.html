@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul id="myul" class="this">
+                <li class="child" id="fui">this</li>
+                <li class="child">is</li>
+                <li class="child">a</li>
+                <li class="child">list </li>
+                <li class="child" id="lui">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    // it will create the element li
+    let element = document.createElement('li');
+
+    // Add a class name to the li element
+    
+    // it helps us to add class to the element
+    element.className = 'child';
+
+    // it helps in adding id to the element
+    element.id = 'createdLi';
+
+    // it helps in adding attribute to the element
+    element.setAttribute('title', 'mytitle');
+
+    // by this way we will not be able to bold the text
+    // element.innerText = '<b>Hello this is created by harry</b>';
+
+    // by this way we will  be able to bold the text
+    // element.innerHTML = '<b>Hello this is created by harry</b>';
+
+    // in this way we write the content in b/w the tags
+    let text = document.createTextNode('I am a text node');
+    element.appendChild(text)
+
+    // we are taking the value ul
+    let ul = document.querySelector('ul.this');
+
+    // in this way we can append the element in the ul
+    ul.appendChild(element);
+    
+    console.log(ul)
+    console.log(element)
+
+
+    // here  we are replacing element with elem2
+    let elem2 = document.createElement('h3');
+    elem2.id = 'elem2';
+    elem2.className = 'elem2';
+    let tnode = document.createTextNode('This is a created node for elem2');
+    elem2.appendChild(tnode);
+
+    // in this way we are replacing element with elem2
+    element.replaceWith(elem2);
+
+
+    let myul = document.getElementById('myul');
+
+    // here we are replacing first element of ui with element
+    // here first argument is element which you want to keep and second argument is the element you want to replacea and this element should be a child of variable on which you are ruuning the function .replaceChild
+    myul.replaceChild(element, document.getElementById('fui')); 
+
+    // in this way you can remove the element
+    myul.removeChild(document.getElementById('lui'));
+
+    // getAttribute returns us the attribute of the element 
+    let pr = elem2.getAttribute('lui');
+
+    // hasAttribute checks presence of the attribute passed for eg: id,class
+    pr=elem2.hasAttribute('id');
+
+    // it will help in removing the attribute
+    elem2.removeAttribute('id');
+
+    // it will help in setAttribute
+    elem2.setAttribute('title', 'myelem2title');
+    console.log(elem2, pr);
+
+// quick quiz
+// create a heading element with text as "Go to CodeWithHarry" and create an a tag outside it with href = "https://www.codewithharry.com"
+
+</script>
+
+</html>

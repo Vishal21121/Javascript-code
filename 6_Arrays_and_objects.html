@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let marks = [34, 23, 24, 93, 73, 25];
+    const fruits = ['Orange', 'Apple', 'Pineapple'];
+    const mixed = ['str', 89, [3, 5]];
+
+    const arr = new Array(23, 123, 21, 'Orange'); // it will create new array 
+    // console.log(marks);
+    // console.log(mixed);
+    // console.log(fruits[1]);
+
+    // console.log(arr.length); // it will give the length of the array
+
+    // console.log(Array.isArray('dfdf')); // it will tell that passed argument is array or not
+
+
+    arr[0] = 'harry';
+    let arrelement = arr[0];
+    // console.log('element :', arrelement);
+    // console.log(arr);
+
+    let value = marks.indexOf(73); // it will tell the index of the argument passed
+    // console.log(value)
+
+    // Mutating or Modifying arrays -> here the functions will change the original array
+
+    // push is used to add the element at the end of the array
+    // marks.push(3564); 
+
+    // unshift is used to add the element at the start of the array
+    // marks.unshift(1009);
+
+    // pop removes the element from the end of the array
+    // marks.pop()
+
+    // shift removes the element from the start of the array
+    // marks.shift()
+
+    // splice function removes the element of the array it takes first argument as the starting point and second argument is the no of elements to remove
+    // marks.splice(2, 3);
+
+    // reverse function will reverse the array
+    // marks.reverse()
+
+
+    let marks2 = [1, 2, 3, 7]
+    marks = marks.concat(marks2); // concat helps in concatting the array
+    // console.log(marks);
+
+    let myobj = {
+        'first name': 'harry',
+        channel: 'CodeWithHarry',
+        isActive: true,
+        marks: [1, 5, 3, 6]
+    }
+
+    console.log(myobj)
+    console.log(myobj['first name'])
+    console.log(myobj['channel'])
+    console.log(myobj.channel)
+
+</script>
+
+</html>

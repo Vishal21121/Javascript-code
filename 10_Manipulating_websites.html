@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+ 
+</body>
+<script>
+    let b = window // -> window is a global object in javascript and we can access the elements by both writing as window.element or just by element
+    let a = window.document;
+    console.log(b)
+    // window.alert('hello vishal');
+    // alert('hello vishal');
+
+    // through prompt we can give alert as well as take input from user
+    // a = prompt('This will destroy your computer. Type your name','guest'); // 2nd argument can be by default
+
+    // in confirm we can take either ok or cancel from the user ok -> means true and cancel -> means false
+    // a = confirm('Are you sure you want to delete this page?');
+
+
+    a = window.innerHeight; // it is the height of the browser window
+    a = innerWidth;  // it is the width of the browser window
+    a = scrollX;  // it show how much we have scrolled in x 
+    a = scrollY; // it show how much we have scrolled in y
+    a = location;  // location has a lot of functions which can be accessed by location.function
+    a = location.toString(); // it will give the url in string format
+    a = window.history;
+    // there are three function in history object 
+    // 1. history.forward() it will take to the ahead page
+    // 2. history.back() -> it will take to the back page
+    // 3. history.go() -> go take the no as argument if you want to go back then pass -1 and for ahead pass 1 and for reload pass 0
+    console.log(a);
+
+</script>
+
+</html>

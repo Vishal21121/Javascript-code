@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Type conversion
+
+    let myvar;
+    myvar = String(34);
+    // console.log(myvar, (typeof myvar));
+
+    let booleanVar = String(true);
+    // console.log(booleanVar, (typeof booleanVar));
+
+    let date = String(new Date());
+    // console.log(date, (typeof date));
+
+    let arr = String([1, 2, 3, 4]);
+    // console.log(arr.length, (typeof arr));
+
+    let i = 75;
+    console.log(i.toString()); // we can use toString() to convert in string
+
+    let str1 = Number('3434');
+    str1 = Number('64d646'); // it will show NaN not a number as it has both num and alphabet
+    str1 = Number(false); // it will show 0 as output
+    str1 = Number([1, 2, 3, 4, 5, 6]); // it will show NaN -> not a number
+    console.log(str1, (typeof str1));
+
+    // parseInt -> it will show only Integer value if there is float value then it will show only integer
+    let number = parseInt('34.215');
+    console.log(number, (typeof number));
+
+
+    // toFixed() -> it takes the number of digits you want to see after decimal point
+    let number2 = parseFloat('34.124587');
+    console.log(number2.toFixed(2), (typeof number1));
+
+
+    // Type Coersion -> if one data is string and other is num then by using + we will concatinate both of them
+    let myStr = '978';
+    let myNum = 78;
+    console.log(myStr + myNum);
+
+
+
+
+
+</script>
+
+</html>

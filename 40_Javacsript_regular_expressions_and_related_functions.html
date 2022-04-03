@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="child">this</li>
+                <li class="child">is</li>
+                <li class="child">a</li>
+                <li class="child">list </li>
+                <li class="child">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    // console.log('Regular expressions and related functions');
+
+    let reg = /vishal/; // this is regular expression literal
+
+    // if we want to search a word which has multiple occurrences then we use g flag 
+    reg = /vishal/g; // g means global
+
+
+    // if we want to search a word which may in capital letter or small letter then we use this i flag but it will give the first occurence not multiple occurence
+    // reg = /vishal/i;
+
+    // console.log(reg);
+    // console.log(reg.source); // this will show the content written inside double slash
+
+    let s = "My name is vishal Singh and I am vishal";
+
+    // functions to match expressions
+    // 1. exec()- this will return an array for match or null for no match.
+
+    let result = reg.exec(s);
+    // console.log(result);
+    //  result = reg.exec(s);
+    // console.log(result);
+    //  result = reg.exec(s);
+    // console.log(result);  // ---> we can find multiple occurences with g flag
+
+    result = reg.exec(s);
+    console.log(result);
+    // in this way we can access other things as exec() function return array for match and null for no match
+    //  console.log(result.index);  // -> this will give us error if the regular expression is not present in the string s or if we get the result as null
+    // console.log(result.input); // -> this will give us error if the regular expression is not present in the string s or if we get the result as null
+
+
+    // 2 test() - returns true if regular expression is present and false if not present in the string 
+    let result2 = reg.test(s);
+    // console.log(result2);
+
+
+    // 3. match() -> it will return an arry of results or null
+
+    // let result3 = reg.match(s)  ---> it is wrong!!!
+
+    // if we use this function with g flag then it will give the word the number of times the word is present in the string
+    let result3 = s.match(reg);
+    console.log(result3);
+
+
+    // 4. search() - Returns index of first match only else -1
+    // let result4 = reg.search(s) ---> This is wrong!!
+    let result4 = s.search(reg) // ---> This is right
+    // console.log(result4);
+
+    // 5. replace() - Returns new replaced string with all the replacements (if global flag is not given, first match will be replaced)
+
+    let result5 = s.replace(reg, 'SHUBHAM');
+    console.log(result5);
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

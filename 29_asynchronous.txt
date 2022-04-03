@@ -1,0 +1,21 @@
+1. Any computation we do requires processor for our Javascript engine to get the job done
+2. Many requests interact with things outside of the processor. for example they may communicate over a network or request data from the storage disk.
+3. This is a lot slower than getting it from memory
+4. We don't want our processor to sit idle when such things are happening
+
+difference between Asynchronous and Synchronous 
+
+An asynchronous model allows multiple things to happen at the same time
+
+whereas In Synchronous : 
+1 Synchronous programming model things happen one at a time
+
+2. when you call a function that performs  along action, it returns only when the action has finished so that it can return the result
+
+3. this stops your program for the time the action takes.
+
+THERE ARE THREE WAYS TO WRITE Asynchronous CODE:
+
+1. Async/await
+2.Callbacks
+3.Promises

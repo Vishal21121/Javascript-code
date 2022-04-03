@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading" class='yourhead rhia is'> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this" id='myul'>
+                <li class="childul" id='fui'>this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul" id='lui'>of my dreams</li>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <button id="btn">Submit form</button>
+            <!-- <input type="button" id='btn' value="submit"> -->
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+    <div class="container">
+    <h1>Student list</h1>
+    <ul id="students"></ul>
+
+        <button id="myBtn" class="btn btn-primary">Your Button</button>
+        <button class="btn btn-primary">Fetch Data</button>
+        <div id="content"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+<script >
+
+// PROMISES ARE USED IN PLACE OF CALL BACK FUNCTIONS
+// Promise: Best video on promises
+// -resolve
+// -reject
+// -pending
+
+// Promise is a Object in js and here in the function func1 we are using promise and we are passing two another function as argument in the promise object
+
+function func1() {
+    return new Promise(function (resolve, reject) {
+        // here we are using setTimeout in place of any https request which will take almost similar time
+        setTimeout(() => {
+            // here at first we will send the https request if status code of https request is 200 then error = false else  error =true
+            const error = true;
+            if (!error) {
+                console.log('Function: Your promise has been resolved')
+                resolve();
+            }
+            else {
+                console.log('Function: Your promise has not been resolved')
+                reject('Sorry not fulfilled');
+            }
+        }, 2000);
+    })
+}
+// func1().then() is used for Promise resolve part if resolve part is executed therefore func1().then will be executed as resolve() and catch is used for Promise reject if reject part is executed then func1().reject will be executed as reject().
+
+func1().then(function(){
+    console.log("Harry: Thanks for resolving")
+}).catch(function(error){
+    console.log("Harry: Very bad bro. Reason: " + error)
+})
+
+
+//---------------------------------------NEW EXAMPLE--------------------------------------------------
+console.log("This is tutorial 37");
+
+// Pretend that this response is coming from the server
+const students = [
+    { name: "harry", subject: "JavaScript" },
+    { name: "Rohan", subject: "Machine Learning" }
+]
+
+
+function enrollStudent(student) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            students.push(student);
+            console.log("Student has been enrolled");
+            const error = false;
+            if (!error) {
+                resolve();
+            }
+            else {
+                reject();
+            }
+        }, 1000);
+    })
+}
+
+function getStudents() {
+    setTimeout(function () {
+        let str = "";
+        students.forEach(function (student) {
+            str += `<li> ${student.name}</li>`
+        });
+        document.getElementById('students').innerHTML = str;
+        console.log("Students have been fetched");
+    }, 5000);
+}
+
+let newStudent = { name: "Sunny", subject: "Python" }
+enrollStudent(newStudent).then(getStudents).catch(function () {
+    console.log("Some error occured");
+});
+
+// function inside then is ran as - resolve()
+// function inside catch is ran as - reject()
+
+    
+</script>
+</html>

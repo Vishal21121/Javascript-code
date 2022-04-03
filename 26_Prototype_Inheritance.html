@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading" class='yourhead rhia is'> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this" id='myul'>
+                <li class="childul" id='fui'>this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul" id='lui'>of my dreams</li>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <button id="btn">Submit form</button>
+            <!-- <input type="button" id='btn' value="submit"> -->
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+<script>
+    console.log("This is tutorial 30");
+
+// here we are creating prototype which has the function added as well as the inbuilt function of prototype
+    const proto = {
+        slogan: function () {
+            return `This company is the best`;
+        },
+        changeName: function (newName) {
+            this.name = newName
+        }
+    }
+
+    // This creates harry object or it is same as instance in python
+    let harry = Object.create(proto);
+
+    // these are like instance varibles in python
+    harry.name = "harry";
+    harry.role = "Programmer";
+    // harry.changeName("Harry2")
+    // console.log(harry)
+
+
+    // This is another way to create Object in javascript
+    const harry1 = Object.create(proto, {
+        name: { value: "harry", writable: true }, // writable: true means we can rewrite the variable
+        role: { value: "Programmer" },
+    });
+    harry1.changeName("Harry2")
+    console.log(harry1)
+
+
+    // Creating Employee constructor
+    function Employee(name, salary, experience) {
+        this.name = name;
+        this.salary = salary;
+        this.experience = experience;
+    }
+
+    // Adding Slogan function in Prototype
+    Employee.prototype.slogan = function () {
+        return `This company is the best. Regards, ${this.name}`;
+    }
+
+    // Create an object from this constructor now
+    let harryObj = new Employee("Harry", 345099, 87);
+    console.log(harryObj.slogan())
+
+
+    // Creating Programmer constructor
+    function Programmer(name, salary, experience, language) {
+        // here we are calling the constructor of the Employee
+        Employee.call(this, name, salary, experience);
+        this.language = language;
+    }
+
+    // here we are creating object in normal way
+    let rohan = new Programmer("Rohan", 2, 0, "Javascript"); 
+    console.log(rohan);
+
+    // Inherit the prototype
+    Programmer.prototype = Object.create(Employee.prototype);
+
+    // Manually set the constructor
+    Programmer.prototype.constructor = Programmer;
+
+
+
+
+</script>
+
+</html>

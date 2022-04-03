@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Ajax in one video - CodeWithHarry</title>
+</head>
+
+<body>
+    <h1>Ajax tutorial</h1>
+    <button type="button" id="fetchBtn" class="btn btn-primary">Fetch Data</button>
+    <button type="button" id="popBtn" class="btn btn-secondary">Populate</button>
+
+    <div class="container">
+        <h1>Employee list</h1>
+        <ul id="list">
+
+        </ul>
+    </div>
+
+</body>
+<script>
+    console.log("Ajax tutorial in one video");
+
+
+    let fetchBtn = document.getElementById('fetchBtn');
+    fetchBtn.addEventListener('click', buttonClickHandler)
+
+    // GET REQUEST
+    // function buttonClickHandler() {
+    //     console.log('You have clicked the fetchBtn');
+
+    //     // Instantiate an xhr object
+    //     const xhr = new XMLHttpRequest();
+
+    //     // Open the object
+    //     // xhr.open() it takes three arguments first is the GET or POST request second is from where you want to bring data and third is do you want an asynchronous or synchronous request
+    //     // GET -> means we will give the link and tell me what is the data
+    //     // POST -> means we will give the link with that we will send some data as well and response will be given according to that sended data.
+
+    //     // here true means asynchronous
+    //     xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true);
+
+
+    //     // What to do on progress (optional)
+    //     xhr.onprogress = function () {
+    //         console.log('On progress');
+    //     }
+
+    //     // xhr.onreadystatechange IS A OLD FUNCTION USE xhr.onload in place of this
+    //     // there are five values of onreadystatechange function value = 4 means data has been loaded and state in which value =4 is same as that of xhr.onload
+
+    //     // xhr.onreadystatechange values and their meanings :
+    //     // 0: request not initialized
+    //     // 1: server connection established
+    //     // 2: request received
+    //     // 3: processing request
+    //     // 4: request finished and response is ready
+
+    //     // xhr.onreadystatechange = function () {
+    //     //     console.log('ready state is ', xhr.readyState);
+
+    //     // }
+
+    //     // What to do when response is ready
+    //     xhr.onload = function () {
+    //         // this.status == 200 means ok
+    //         if(this.status === 200) {
+
+    //             console.log(this.responseText)
+    //         }
+    //         else {
+    //             console.log("Some error occured")
+    //         }
+    //     }
+
+
+    //     // send the request
+    //     // this is the data we are sending in th post requset
+
+    //     // it is sending the request
+    //     xhr.send();
+
+    //     console.log("We are done!");
+
+    // }
+    
+    // Post request
+    function buttonClickHandler() {
+        console.log('You have clicked the fetchBtn');
+
+        // Instantiate an xhr object
+        const xhr = new XMLHttpRequest();
+
+        // Open the object
+        // xhr.open() it takes three arguments first is the GET or POST request second is from where you want to bring data and third is do you want an asynchronous or synchronous request
+        // GET -> means we will give the link and tell me what is the data
+        // POST -> means we will give the link with that we will send some data as well and response will be given according to that sended data.
+
+
+        // USE THIS FOR POST REQUEST
+        xhr.open('POST', 'http://dummy.restapiexample.com/api/v1/create', true);
+
+        xhr.getResponseHeader('Content-type', 'application/json');
+
+
+        // What to do on progress (optional)
+        xhr.onprogress = function () {
+            console.log('On progress');
+        }
+
+        // xhr.onreadystatechange IS A OLD FUNCTION USE xhr.onload in place of this
+        // there are five values of onreadystatechange function value = 4 means data has been loaded and state in which value =4 is same as that of xhr.onload
+
+        // xhr.onreadystatechange values and their meanings :
+        // 0: request not initialized
+        // 1: server connection established
+        // 2: request received
+        // 3: processing request
+        // 4: request finished and response is ready
+
+        // xhr.onreadystatechange = function () {
+        //     console.log('ready state is ', xhr.readyState);
+
+        // }
+
+        // What to do when response is ready
+        xhr.onload = function () {
+            // this.status == 200 means ok
+            if(this.status === 200) {
+
+                console.log(this.responseText)
+            }
+            else {
+                console.log("Some error occured")
+            }
+        }
+
+
+
+
+        // send the request
+        // this is the data we are sending in th post requset
+        params = `{"name":"test34sad545","salary":"123","age":"23"}`;
+
+        // it is sending the request
+        xhr.send(params);
+
+        console.log("We are done!");
+
+    }
+
+
+    // POPULATING IN THE DOM -> Populating means showing the things in the dom
+    let popBtn = document.getElementById('popBtn');
+    popBtn.addEventListener('click', popHandler);
+
+    function popHandler() {
+        console.log('You have clicked the pop handler');
+
+        // Instantiate an xhr object
+        const xhr = new XMLHttpRequest();
+
+        // Open the object
+        xhr.open('GET', 'http://dummy.restapiexample.com/api/v1/employees', true);
+
+
+        // What to do when response is ready
+        xhr.onload = function () {
+            if(this.status === 200) {
+                let obj = JSON.parse(this.responseText);
+                console.log(obj);
+                let obj1 = obj.data;
+                let list = document.getElementById('list');
+                let str = "";
+                for(key in obj1) {
+                    str += `<li>${obj1[key].employee_name} </li>`;
+                }
+                list.innerHTML = str;
+            }
+            else {
+                console.log("Some error occured")
+            }
+        }
+
+        // send the request
+        xhr.send();
+        console.log("We are done fetching employees!");
+
+    }
+
+
+</script>
+
+</html>

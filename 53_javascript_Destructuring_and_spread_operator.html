@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading" class='yourhead rhia is'> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this" id='myul'>
+                <li class="childul" id='fui'>this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul" id='lui'>of my dreams</li>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <button id="btn">Submit form</button>
+            <!-- <input type="button" id='btn' value="submit"> -->
+        </form>
+    </div>
+    <!-- <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div> -->
+    <div class="container">
+        <h1>Student list</h1>
+        <ul id="students"></ul>
+
+        <button id="myBtn" class="btn btn-primary">Your Button</button>
+        <button class="btn btn-primary">Fetch Data</button>
+        <div id="content"></div>
+    </div>
+
+    <div class="container my-3">
+        <h1>Pull the results by clicking the button below:</h1>
+
+        <button class="btn btn-primary" id="meanings">Get meanings</button>
+        <div class="my-2">
+            <ul id="defs"></ul>
+        </div>
+    </div>
+
+
+    <script>
+        console.log('This is tutorial 60');
+        // Destructuring in JavaScript
+
+        let a, b;
+        [a, b] = [34, 564];
+        // console.log(a, b);
+
+        // Destructuring is done using ...variable
+        [a, b, c, ...d] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+        // console.log(a) // a=1
+        // console.log(b) // b=2
+        // console.log(c) // c=3
+        // console.log(d) // d=[4,5,6,7,8,9,10]
+
+        ({ a, b, c, ...d } = { a: 34, b: 345, c: 67, d: 45, e: 34 })
+        // console.log(a, b, c, d)
+
+        // Array Destructuring
+        const fruits = ['Apple', 'Bananas', 'Mangoes'];
+        [a, b, c] = fruits;
+        // console.log(a, b, c)
+
+
+        // Object Destructuring
+        const laptop = {
+            model: "HP Pavilion",
+            age: "23 days",
+            gender: "Male",
+            net: 1233,
+            start: function () { console.log('started'); }
+        }
+
+        // here we have to write same variables as that key in object
+        const { model, age, gender, net, start } = laptop;
+        console.log(model, age, gender, net, start);
+        start()
+
+        // spread operator
+        arr = [1, 2, 3, 4, 6, 32]
+        function avg(a, b, c) {
+            return (a + b + c) / 3
+        }
+        let z = avg(...arr) // ... is the syntax of the spread operator and it is opening the array
+        z = [4, 7, ...arr, 67]
+        z = [...arr]
+        console.log(z)
+        let a2 = [5, 7, 8, 9];
+        z = [...arr, ...a2]
+        console.log(z);
+
+        let obj1 = {
+            name1: "Vishal",
+            class1: "5b",
+            favLang: "Javascript"
+        };
+
+// Method 1 to change the favlang and copy to obj2
+
+// let obj2={}
+// obj2.name1="Vishal";
+// obj2.class1="5b";
+// obj2.favLang="Python";
+
+// Method 2 
+
+//  let obj2 = {...obj1,favLang:"Python"}  // it is telling that take every thing from obj1 and replace favlang by python
+
+// console.log(obj2)
+    </script>
+</body>
+
+</html>
