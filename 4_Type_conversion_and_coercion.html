@@ -30,10 +30,14 @@
     let i = 75;
     console.log(i.toString()); // we can use toString() to convert in string
 
+    //  Number conversion
     let str1 = Number('3434');
-    str1 = Number('64d646'); // it will show NaN not a number as it has both num and alphabet
+    let value;
+    str1 = Number('64d646'); // its value will be NaN but type will be NaN not a number as it has both num and alphabet
     str1 = Number(false); // it will show 0 as output
     str1 = Number([1, 2, 3, 4, 5, 6]); // it will show NaN -> not a number
+    value = Number(null) // it will convert to value NaN but type will be number
+    value = Number(undefined) // it will convert to value NaN but type will be number
     console.log(str1, (typeof str1));
 
     // parseInt -> it will show only Integer value if there is float value then it will show only integer
@@ -45,6 +49,12 @@
     let number2 = parseFloat('34.124587');
     console.log(number2.toFixed(2), (typeof number1));
 
+    //  Boolean conversion
+    let booleanConvertedVal = Boolean(1)
+    booleanConvertedVal = Boolean(0)
+    booleanConvertedVal = Boolean("")
+    booleanConvertedVal = Boolean("vishal")
+    console.log(booleanConvertedVal);
 
     // Type Coersion -> if one data is string and other is num then by using + we will concatinate both of them
     let myStr = '978';
