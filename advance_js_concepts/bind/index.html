@@ -16,12 +16,14 @@
             this.library = "React"
             this.server = "https://localhost:3000"
 
-            //* using bind we are combining context of first this i.e of button with the context of this constructor.
+            //* using bind we are providing the context of the class React to the handleClick
+            // here we cannot use call in place of bind as call will immediately call the function handleClick when eventListener is being set whereas bind does not calls the function immediately.
             document.querySelector('button').addEventListener('click', this.handleClick.bind(this))
 
         }
         handleClick() {
             console.log("button clicked");
+            // over here we are getting context of the React class in this
             console.log(this.server);
         }
     }
