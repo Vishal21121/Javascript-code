@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+<script>
+    function outer() {
+        let username = "vishal"
+        // console.log("Outer secret", secret)
+        function inner() {
+            let secret = "my123"
+            console.log("inner", username)
+        }
+        function innerTwo() {
+            console.log("innerTwo", username)
+            // console.log(secret)
+        }
+        inner()
+        innerTwo()
+    }
+    // outer()
+    // console.log("Too Outer", username)
+
+    function makeFunc() {
+        const name = "MOZILLA"
+        function displayName() {
+            console.log(name)
+        }
+        // when the displayName is being returned then not only function's execution context is returned rather if it is inside other function then that function scope is also returned.
+        // In short execution context of displayName + lexical scope of displayName is returned.
+        // This is called as closure.
+        // In closure as we can see that even though makeFunc has completed it's execution so it is removed from call stack but memory allocated to this function is not freed as the displayName function requires that memory while accessing name variable of makeFunc
+        return displayName
+    }
+
+    const myFunc = makeFunc()
+    myFunc()
+</script>
+
+<script>
+    // PRACTICAL EXAMPLE OF CLOSURE
+    function clickHandler(color) {
+        return function () {
+            document.body.style.backgroundColor = color
+        }
+    }
+
+    document.getElementById("orange").addEventListener("click", clickHandler("orange"))
+
+    document.getElementById("green").addEventListener("click", clickHandler("green"))
+</script>
+
+
+</html>
